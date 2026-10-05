@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Boli } from '../entities/bolis.entity.js';
-import { BoliCategory } from '../entities/bolis.category.entity.js';
+import { Boli } from '../entities/boli.entity.js';
+import { BoliCategory } from '../entities/boli.category.entity.js';
 import { BolisService } from './bolis.service.js';
 import { BolisController } from './bolis.controller.js';
 

@@ -3,9 +3,11 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { BoliCategory } from './bolis.category.entity.js';
+import { BoliCategory } from './boli.category.entity.js';
+import { OrderBoli } from './order.boli.entity.js';
 
 @Entity('bolis')
 export class Boli {
@@ -22,4 +24,7 @@ export class Boli {
   stockQuantity: number;
   @Column({ name: 'unit_production_cost' })
   unitProductionCost: number;
+
+  @OneToMany(() => OrderBoli, (orderBoli) => orderBoli.boliId)
+  orderBoli: OrderBoli[];
 }

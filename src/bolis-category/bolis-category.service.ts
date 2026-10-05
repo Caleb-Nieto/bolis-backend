@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { BoliCategory } from '../entities/bolis.category.entity.js';
+import { BoliCategory } from '../entities/boli.category.entity.js';
 import { UpdateBoliCategoryPriceDto } from './dto/update-boli-category-price.dto.js';
 
 @Injectable()
@@ -10,6 +10,10 @@ export class BolisCategoryService {
     @InjectRepository(BoliCategory)
     private readonly boliCategoryRepository: Repository<BoliCategory>,
   ) {}
+
+  async findAll(): Promise<BoliCategory[]> {
+    return await this.boliCategoryRepository.find();
+  }
 
   async updatePrice(
     id: number,
