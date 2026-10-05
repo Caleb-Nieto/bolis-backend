@@ -1,11 +1,8 @@
-import {
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Boli } from '../entities/bolis.entity.js';
-import { BoliCategory } from '../entities/bolis.category.entity.js';
+import { Boli } from '../entities/boli.entity.js';
+import { BoliCategory } from '../entities/boli.category.entity.js';
 import { CreateBoliDto } from './dto/create-boli.dto.js';
 import { UpdateBoliDto } from './dto/update-boli.dto.js';
 

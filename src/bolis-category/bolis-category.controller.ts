@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Get,
   Param,
   ParseIntPipe,
   Patch,
@@ -36,5 +37,17 @@ export class BolisCategoryController {
     @Body() updatePriceDto: UpdateBoliCategoryPriceDto,
   ) {
     return this.bolisCategoryService.updatePrice(id, updatePriceDto);
+  }
+
+  @Get()
+  @ApiOperation({
+    summary: 'Get all categories',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'List of categories.',
+  })
+  findAll() {
+    return this.bolisCategoryService.findAll();
   }
 }
