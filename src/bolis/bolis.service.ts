@@ -76,8 +76,8 @@ export class BolisService {
       boli.flavour = updateBoliDto.flavour;
     }
 
-    if (updateBoliDto.stockQuantity !== undefined) {
-      boli.stockQuantity = updateBoliDto.stockQuantity;
+    if (updateBoliDto.addToStock !== undefined) {
+      boli.stockQuantity += updateBoliDto.addToStock;
     }
 
     return this.boliRepository.save(boli);

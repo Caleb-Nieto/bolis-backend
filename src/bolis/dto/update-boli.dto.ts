@@ -11,5 +11,5 @@ export class UpdateBoliDto {
   categoryId?: number;
 
   @ApiPropertyOptional({ example: 30, description: 'Current stock quantity' })
-  stockQuantity?: number;
+  addToStock?: number;
 }
