@@ -38,7 +38,7 @@ export class BolisService {
   async findAll(): Promise<Boli[]> {
     return this.boliRepository.find({
       relations: { category: true },
-      order: { stockQuantity: 'DESC' },
+      order: { flavour: 'ASC' },
     });
   }
 

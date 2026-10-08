@@ -37,11 +37,11 @@ export class BolisController {
   // ─── READ ALL ─────────────────────────────────────────────────────────────
   @Get()
   @ApiOperation({
-    summary: 'Get all bolis ordered by stock quantity (highest to lowest)',
+    summary: 'Get all bolis ordered alphabetically by flavour',
   })
   @ApiResponse({
     status: 200,
-    description: 'List of bolis sorted by stock quantity descending.',
+    description: 'List of bolis sorted by flavour ascending.',
   })
   findAll() {
     return this.bolisService.findAll();
